@@ -22,9 +22,9 @@ public class Constants {
     public static final String ACCOUNT_CREATED_TITLE = "Automation Exercise - Account Created";
     public static final String CART_PAGE_TITLE = "Automation Exercise - Checkout";
 
-    // Order Test Login Credentials
-    public static final String ORDER_TEST_EMAIL = "akash@123.com";
-    public static final String ORDER_TEST_PASSWORD = "kpPQur@jPgGXY62";
+    // Order Test Login Credentials (reads from system properties for CI, falls back to defaults for local)
+    public static final String ORDER_TEST_EMAIL = System.getProperty("test.email", "akash@123.com");
+    public static final String ORDER_TEST_PASSWORD = System.getProperty("test.password", "kpPQur@jPgGXY62");
 
     // Order Flow Titles & Messages
     public static final String CHECKOUT_PAGE_TITLE = "Automation Exercise - Checkout";
